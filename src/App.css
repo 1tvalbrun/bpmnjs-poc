@@ -1,0 +1,188 @@
+/* App styles */
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.header {
+  padding: 15px;
+  background-color: #000;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.error {
+  color: #d32f2f;
+  padding: 1rem;
+  border: 1px solid #d32f2f;
+  border-radius: 4px;
+  background-color: #ffebee;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+button:hover {
+  background-color: #1976d2;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Make the diagram render area fill available space */
+.bpmn-modeler-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Fix the palette position */
+.djs-palette {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: #f8f8f8;
+  border-right: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make the canvas take up all available space */
+.canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Fix any overlapping issues */
+.djs-overlay-container,
+.djs-shape,
+.djs-connection {
+  z-index: 10;
+}
+
+/* Make sure the diagram contents are visible over palette */
+.djs-container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+
+/* Adjust the diagram container to fill the available space */
+.diagram-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Context menu and popup styles */
+.djs-popup,
+.djs-context-pad {
+  background-color: #f0f0f0 !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  z-index: 200 !important;
+}
+
+.djs-context-pad .entry {
+  background-color: #ffffff !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px !important;
+  margin: 2px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.djs-popup-header {
+  background-color: #e0e0e0 !important;
+  border-bottom: 1px solid #ccc !important;
+}
+
+.djs-popup-body {
+  background-color: #f5f5f5 !important;
+}
+
+.djs-popup .entry {
+  background-color: #ffffff !important;
+  border: 1px solid #ddd !important;
+  margin: 2px !important;
+}
+
+/* Style for the action buttons that appear when clicking elements */
+.djs-context-pad .entry:hover {
+  background-color: #e3f2fd !important;
+  border-color: #2196f3 !important;
+}
+
+/* For the background canvas */
+.diagram-container {
+  background-color: #f5f5f5 !important;
+}
+
+/* Custom background for the canvas */
+#js-canvas,
+.bjs-container {
+  background-color: #f5f5f5 !important;
+  width: 100% !important;
+}
+
+/* Make sure the canvas takes up all available space */
+.bjs-container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.djs-container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
